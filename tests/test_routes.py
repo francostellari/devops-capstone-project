@@ -132,7 +132,7 @@ class TestAccountService(TestCase):
         """It should Read a single Account by using its id"""
         account = self._create_accounts(1)[0]
         response = self.client.get(
-            BASE_URL + f"/{account.id}", 
+            BASE_URL + f"/{account.id}",
             content_type="application/json"
         )
         self.assertEqual(response.status_code, status.HTTP_200_OK)
